@@ -1,0 +1,21 @@
+name: NickName
+author: corytortoise
+main: corytortoise\NickName\NickName
+version: 1.0
+api: [3.0, 3.1]
+description: Enables alternate display names to be set for players.
+
+commands:
+    nickname:
+        description: Changes display name of a player.
+        usage: /nickname [player] [nickname]
+        permission: nickname.change
+        
+permissions:
+    nickname:
+        default: false
+        description: "Allows you to change anyone's nickname"
+        children:
+            nickname.change:
+                default: true
+                description: "Allows you to change your own nickname"
